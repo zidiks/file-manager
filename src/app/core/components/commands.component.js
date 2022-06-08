@@ -1,6 +1,5 @@
 import { CommonComponent } from "../prototypes/component.proto.js";
 import { FeaturesComponent } from "./features.component.js";
-import {featuresList} from "../../features/featuresList.js";
 
 export class CommandsComponent extends CommonComponent{
 
