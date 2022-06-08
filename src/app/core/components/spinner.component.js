@@ -1,4 +1,6 @@
-export class Spinner {
+import { CommonComponent } from "../prototypes/component.proto.js";
+
+export class SpinnerComponent extends CommonComponent {
 
     sprites = [ '⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏' ];
     count = 0;

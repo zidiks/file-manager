@@ -1,7 +1,11 @@
-export class Commands {
+import { CommonComponent } from "../prototypes/component.proto.js";
+import { FeaturesComponent } from "./features.component.js";
+import {featuresList} from "../../features/featuresList.js";
 
-    constructor(featuresKeys) {
-        this.featuresKeys = featuresKeys;
+export class CommandsComponent extends CommonComponent{
+
+    injections = {
+        featuresComponent: FeaturesComponent,
     }
 
     listen() {
@@ -13,7 +17,7 @@ export class Commands {
                     process.exit();
                     break;
                 default:
-                    if (this.featuresKeys.includes(command)) {
+                    if (this.featuresComponent.featuresKeys.includes(command)) {
                         if (this.cb) {
                             this.cb(command, chunk);
                         }

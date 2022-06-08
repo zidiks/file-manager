@@ -1,7 +1,7 @@
-import { FeatModule } from "../featuresModuleClass.js";
 import { checkPathExists } from "../../shared/methods/checkPathExists.js";
+import { FeatComponent } from "../../core/prototypes/component.proto.js";
 
-export class NavigationUp extends FeatModule {
+export class NavigationUpComponent extends FeatComponent {
     command = 'up';
 
     async exec(props) {

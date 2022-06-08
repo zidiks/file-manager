@@ -1,5 +1,5 @@
-import { FMCore } from "./modules/core/core.js";
+import { AppModule } from "./app/app.module.js";
 
-const fileManager = new FMCore();
+const app = new AppModule();
 
-fileManager.init();
+app.init();

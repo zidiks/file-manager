@@ -1,7 +1,7 @@
-import { FeatModule } from "../featuresModuleClass.js";
 import { checkPathExists } from "../../shared/methods/checkPathExists.js";
+import { FeatComponent } from "../../core/prototypes/component.proto.js";
 
-export class NavigationCd extends FeatModule {
+export class NavigationCdComponent extends FeatComponent {
     command = 'cd';
 
     async exec(props) {
@@ -43,5 +43,5 @@ export class NavigationCd extends FeatModule {
         } else {
             return path;
         }
-;    }
+    }
 }
