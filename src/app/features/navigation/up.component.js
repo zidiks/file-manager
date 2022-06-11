@@ -1,6 +1,7 @@
 import { checkPathExists } from "../../shared/methods/checkPathExists.js";
 import { FeatComponent } from "../../core/prototypes/component.proto.js";
 import { StateComponent } from "../../core/components/state.component.js";
+import { sep } from 'path';
 
 export class NavigationUpComponent extends FeatComponent {
     command = 'up';
@@ -10,7 +11,7 @@ export class NavigationUpComponent extends FeatComponent {
     }
 
     async exec(props) {
-        const newPath = this.stateComponent.currentPath.slice().split('/').slice(0, -1).join('/');
+        const newPath = this.stateComponent.currentPath.slice().split(sep).slice(0, -1).join(sep);
         console.log(this.stateComponent.currentPath);
         return checkPathExists(newPath).then((exists) => {
             if (exists) {

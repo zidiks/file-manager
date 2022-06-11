@@ -8,7 +8,9 @@ import { StateComponent } from "./core/components/state.component.js";
 import { UserComponent } from "./core/components/user.component.js";
 import { FeaturesComponent } from "./core/components/features.component.js";
 import { AppComponent } from "./app.component.js";
-import { FsReadComponent } from "./features/fs/read.js";
+import { FsReadComponent } from "./features/fs/read.component.js";
+import { FsCreateComponent } from "./features/fs/create.component.js";
+import { FsRenameComponent } from "./features/fs/rename.component.js";
 
 export class AppModule extends Module {
     components = [
@@ -22,6 +24,8 @@ export class AppModule extends Module {
         UserComponent,
         AppComponent,
         FsReadComponent,
+        FsCreateComponent,
+        FsRenameComponent,
     ];
 
     bootstrap = [

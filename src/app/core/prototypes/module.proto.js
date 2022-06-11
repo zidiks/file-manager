@@ -1,5 +1,5 @@
 import { CommonComponent, FeatComponent } from "./component.proto.js";
-import {FeaturesComponent} from "../components/features.component.js";
+import { FeaturesComponent } from "../components/features.component.js";
 
 export class Module {
     components;

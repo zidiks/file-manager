@@ -13,7 +13,7 @@ export class UserComponent extends CommonComponent {
         this.stateComponent.currentUser = name;
     }
 
-    initUserName() {
+     initUserName() {
         const userNameArg = this.args.find(arg => arg.includes('--username'));
         if (userNameArg) {
             const userName = userNameArg.slice(11);

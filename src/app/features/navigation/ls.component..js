@@ -10,7 +10,7 @@ export class NavigationLsComponent extends FeatComponent {
         stateComponent: StateComponent,
     }
 
-    async exec() {
+    async exec(props) {
         return checkPathExists(this.stateComponent.currentPath).then((exists) => {
             if (exists) {
                 return fs.readdir(this.stateComponent.currentPath).then((fileNames) => {
