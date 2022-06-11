@@ -15,17 +15,16 @@ export class FsRenameComponent extends FeatComponent {
         if (!props[0] || !props[1]) {
             throw new Error('Empty path or name');
         } else {
-            const path = generatePath(this.stateComponent.currentPath, props[0]);
-            const newPath = generatePath(path, `../${props[1]}`);
-            return checkPathExists(path).then((exists) => {
-                if (exists) {
-                    return fs.readFile(path, { encoding: 'utf8' })
-                        .then((content) => console.log(content))
-                        .catch((err) => {
-                            throw new Error(`Read file error: ${err}`);
-                        });
+            const oldPath = generatePath(this.stateComponent.currentPath, props[0]);
+            const newPath =  generatePath(oldPath, `../${props[1]}`);
+            return Promise.all([
+                checkPathExists(oldPath),
+                checkPathExists(newPath),
+            ]).then((res) => {
+                if (res[0] && !res[1]) {
+                    fs.rename(oldPath, newPath).then(() => console.log(`Renamed to ${res[1]}`));
                 } else {
-                    throw new Error('Invalid path');
+                    throw new Error('Rename error');
                 }
             });
         }
