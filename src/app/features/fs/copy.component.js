@@ -17,7 +17,7 @@ export class FsCopyComponent extends FeatComponent {
             throw new Error('Empty path or name');
         } else {
             const oldPath = generatePath(this.stateComponent.currentPath, props[0]);
-            const newPath =  path.join(generatePath(this.stateComponent.currentPath, props[1]), oldPath.split(path.sep).slice(-1).join(''));
+            const newPath =  path.join(generatePath(this.stateComponent.currentPath, props[1]), path.basename(oldPath));
             return Promise.all([
                 checkPathExists(oldPath),
                 checkPathExists(newPath),

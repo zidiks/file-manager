@@ -12,6 +12,8 @@ import { FsReadComponent } from "./features/fs/read.component.js";
 import { FsCreateComponent } from "./features/fs/create.component.js";
 import { FsRenameComponent } from "./features/fs/rename.component.js";
 import { FsCopyComponent } from "./features/fs/copy.component.js";
+import { FsMoveComponent } from "./features/fs/move.component.js";
+import { FsDeleteComponent } from "./features/fs/delete.component.js";
 
 export class AppModule extends Module {
     components = [
@@ -28,6 +30,8 @@ export class AppModule extends Module {
         FsCreateComponent,
         FsRenameComponent,
         FsCopyComponent,
+        FsMoveComponent,
+        FsDeleteComponent,
     ];
 
     bootstrap = [
