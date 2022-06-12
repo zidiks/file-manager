@@ -20,6 +20,9 @@ import { OsHomedirComponent } from "./features/os/homedir.component.js";
 import { OsEolComponent } from "./features/os/eol.component.js";
 import { OsCpusComponent } from "./features/os/cpus.component.js";
 import { OsArchitectureComponent } from "./features/os/architecture.component.js";
+import { HashComponent } from "./features/hash/hash.component.js";
+import { CompressComponent } from "./features/archives/compress.component.js";
+import { DecompressComponent } from "./features/archives/decompress.component.js";
 
 export class AppModule extends Module {
     components = [
@@ -44,6 +47,9 @@ export class AppModule extends Module {
         OsEolComponent,
         OsCpusComponent,
         OsArchitectureComponent,
+        HashComponent,
+        CompressComponent,
+        DecompressComponent,
     ];
 
     bootstrap = [
