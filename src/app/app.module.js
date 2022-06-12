@@ -14,6 +14,12 @@ import { FsRenameComponent } from "./features/fs/rename.component.js";
 import { FsCopyComponent } from "./features/fs/copy.component.js";
 import { FsMoveComponent } from "./features/fs/move.component.js";
 import { FsDeleteComponent } from "./features/fs/delete.component.js";
+import { OsComponent} from "./features/os/os.component.js";
+import { OsUsernameComponent } from "./features/os/username.component.js";
+import { OsHomedirComponent } from "./features/os/homedir.component.js";
+import { OsEolComponent } from "./features/os/eol.component.js";
+import { OsCpusComponent } from "./features/os/cpus.component.js";
+import { OsArchitectureComponent } from "./features/os/architecture.component.js";
 
 export class AppModule extends Module {
     components = [
@@ -32,6 +38,12 @@ export class AppModule extends Module {
         FsCopyComponent,
         FsMoveComponent,
         FsDeleteComponent,
+        OsComponent,
+        OsUsernameComponent,
+        OsHomedirComponent,
+        OsEolComponent,
+        OsCpusComponent,
+        OsArchitectureComponent,
     ];
 
     bootstrap = [
